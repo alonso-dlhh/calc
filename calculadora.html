@@ -1,0 +1,40 @@
+<!DOCTYPE html><html><head>
+<html><head>
+	<meta charset="utf-8">
+	<title>CORE2016 P3</title>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+	<script type="text/javascript">
+	var  acum=0;
+	$(function(){
+		var num = $("#pantalla");		
+		$("#pantalla").on("click",function(){$("#pantalla").val("");});	//Limpia el cuadro de texto al hacer click en el
+		
+		$("#cuadrado").on("click",function(){			//Funcion cuadrado
+			if(isNaN(num.val())){		//Si no es un numero (NaN) muestra ERROR
+				num.val("ERROR");
+			}else{	
+			acum=num.val()*num.val();//Guarda en el acumulador el cuadrado			
+			num.val(acum);	//Muestra el valor
+			acum=0;	//Reinicia el acumulador
+			}
+		});
+	});
+	</script>
+</head>
+<body>
+	<div id="main">
+		
+		<header>
+	Bienvenido a la calculadora de Alonso de la Hera Herrera (alonsodela.hera.herrera@alumnos.upm.es)
+		</header>
+		<div id="clc">
+		<label>Numero:</label>
+		<input id="pantalla" type="text">
+		</div>
+		<div id="botones">
+			<button id="cuadrado">x<sup>2</sup></button>
+		</div>
+	</div>
+
+
+</body></html>
