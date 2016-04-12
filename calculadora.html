@@ -18,6 +18,15 @@
 			acum=0;	//Reinicia el acumulador
 			}
 		});
+		$("#cubo").on("click",function(){			//Funcion cuadrado
+			if(isNaN(num.val())){		//Si no es un numero (NaN) muestra ERROR
+				num.val("ERROR");
+			}else{	
+			acum=num.val()*num.val()*num.val();//Guarda en el acumulador el cubo			
+			num.val(acum);	//Muestra el valor
+			acum=0;	//Reinicia el acumulador
+			}
+		});
 		$("#raiz").on("click",function(){//Funcion raiz
 			if(isNaN(num.val())){	//Si no es un numero (NaN) muestra ERROR
 				num.val("ERROR");
@@ -42,6 +51,7 @@
 		</div>
 		<div id="botones">
 			<button id="cuadrado">x<sup>2</sup></button>
+			<button id="cubo">x<sup>3</sup></button>
 			<button id="raiz">sqrt(x)</button>
 		</div>
 	</div>
