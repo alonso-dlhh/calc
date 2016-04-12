@@ -18,6 +18,15 @@
 			acum=0;	//Reinicia el acumulador
 			}
 		});
+		$("#raiz").on("click",function(){//Funcion raiz
+			if(isNaN(num.val())){	//Si no es un numero (NaN) muestra ERROR
+				num.val("ERROR");
+			}else{
+				acum=Math.sqrt(num.val());//Guarda en el acumulador el valor de la raiz
+				num.val(acum);	//Muestra el valor 
+				acum=0;		//Reinicia el acumulador
+			}
+		});
 	});
 	</script>
 </head>
@@ -33,6 +42,7 @@
 		</div>
 		<div id="botones">
 			<button id="cuadrado">x<sup>2</sup></button>
+			<button id="raiz">sqrt(x)</button>
 		</div>
 	</div>
 
